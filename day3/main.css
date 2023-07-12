@@ -1,0 +1,72 @@
+/* h1 {
+    color: blue;
+} */
+
+/* div { */
+    /* basic property */
+    /* height: 300px;
+    width: 300px; */
+    /* border: 1px solid black; */
+
+    /* 
+    box model
+    1. border
+    2. margin
+    3. padding
+    */
+    /* border-top: 5px solid red;
+    border-left: 5px solid green;
+    border-right: 5px solid blue;
+    border-bottom: 5px solid yellow; */
+    /* border-radius: 100%; */
+    /* border-top-left-radius: 100%; */
+    /* border-top-right-radius: 100%; */
+    /* border-bottom-left-radius: 50%; */
+    /* border-bottom-right-radius: 100%; */
+    /* margin: 50px; */
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+    /* margin: 50px 50px; */
+    /* float: left; */
+    /* float: right; */
+    /* transform: translate(50px, 50px); */
+    /* padding: 20px; */
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    /* padding-top: 20px; */
+    /* padding-bottom: 20px; */
+    /* padding: 20px 100%; */
+    /* transform: scale(2); */
+/* } */
+
+/* * {
+    border: 1px solid white;
+} */
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+    color: white;
+}
+
+#container {
+    margin-top: 80px;
+    height: 100%;
+    width: 700px;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+#container:hover {
+    box-shadow: 50px 0px 50px red, 0px 50px 50px blue, -50px 0px 50px yellow, 0px -50px 50px green;
+}
+
+p:hover {
+    color: red;
+}

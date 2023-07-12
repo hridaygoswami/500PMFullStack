@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.sun {
+    margin-top: 1200px;
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    border: 1px solid yellow;
+    background-color: yellow;
+    animation: revolution 10s infinite ease-in-out;
+}
+
+@keyframes revolution {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.mercury {
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    transform: translate(20px, 80px);
+    background-color: grey;
+}
+
+.mer-orbit {
+    height: 550px;
+    width: 550px;
+    transform: translate(-30px, -28px);
+}
+
+
+.venus {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 1px solid green;
+    background-color: green;
+    transform: translate(65px, 25px);
+}
+
+.ven-orbit {
+    height: 700px;
+    width: 700px;
+    transform: translate(-109px, -660px);
+}
+
+
+.earth {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 1px solid blue;
+    background-color: blue;
+    transform: translate(250px, -34px);
+}
+
+.ear-orbit {
+    height: 900px;
+    width: 900px;
+    transform: translate(-215px, -1464px);
+}
+
+
+.mars {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 1px solid maroon;
+    background-color: maroon;
+    transform: translate(183px, 35px);
+}
+
+.mar-orbit {
+    height: 1100px;
+    width: 1100px;
+    transform: translate(-306px, -2474px);
+}
+
+
+.saturn {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 1px solid gold;
+    background-color: gold;
+    transform: translate(-58px, 228px);
+}
+
+.sat-orbit {
+    height: 1500px;
+    width: 1500px;
+    transform: translate(-519px, -3765px);
+}
+
+.jupyter {
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    border: 1px solid brown;
+    background-color: brown;
+    transform: translate(0px, 228px);
+}
+
+.jup-orbit {
+    height: 2500px;
+    width: 2500px;
+    transform: translate(-1018px, -5675px);
+}
+
+.uranus {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 1px solid skyblue;
+    background-color: skyblue;
+    transform: translate(-94px, 905px);
+}
+
+
+.ura-orbit {
+    height: 3000px;
+    width: 3000px;
+    transform: translate(-1299px, -8402px);
+}
+
+
+.neptune {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    border: 1px solid blueviolet;
+    background-color: blueviolet;
+    transform: translate(65px, 728px);
+}
+
+.nep-orbit {
+    height: 3500px;
+    width: 3500px;
+    transform: translate(-1569px, -11619px);
+}
+
+.orbit {
+    border-radius: 100%;
+    border: 5px dashed grey;
+}

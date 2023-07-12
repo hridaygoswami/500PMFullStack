@@ -1,0 +1,74 @@
+/* p:hover {
+    font-size: xx-large;
+} */
+/* a:visited {
+    color: red;
+} */
+/* a:hover {
+    color: white;
+} */
+
+/* a:first-child {
+    color: red;
+} */
+/* a:nth-child(1) {
+    color: green;
+}
+a:nth-child(2) {
+    color: red;
+} */
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#container {
+    height: 100%;
+    width: 500px;
+    border: 1px solid burlywood;
+    background-color: burlywood;
+}
+
+#pizza {
+    height: 500px;
+    width: 500px;
+    /* border: 1px solid black; */
+    border-radius: 100%;
+    background-image: radial-gradient(#f5f5f5,yellow);
+}
+
+.pep {
+    height: 50px;
+    width: 50px;
+    border: 1px solid red;
+    border-radius: 100%;
+    background-color: red;
+}
+
+.pep1 {
+    transform: translate(230px, 59px);
+}
+
+.pep2 {
+    transform: translate(100px, 100px);
+}
+
+.pep3 {
+    transform: translate(149px, 237px);
+}
+
+.pep4 {
+    transform: translate(232px, 76px);
+}
+
+.pep5 {
+    transform: translate(373px, 92px);
+}
+
+.pep6 {
+    transform: translate(33px, 0px);
+}
+
