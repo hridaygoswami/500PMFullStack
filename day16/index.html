@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            /* float: left; */
+        }
+        .first {
+            float: left;
+        }
+        .second {
+            float: left;
+        }
+        .third {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="demo"></div> -->
+    <button onclick="layout()">Click</button>
+    <script>
+        function layout() {
+            // let div = document.getElementById('demo').innerHTML
+            let classes = ['first', 'second', 'third']
+            let str = ''
+            for(let i=0; i<5; i++) {
+                for(let j=0; j<5; j++) {
+                    str = str + '<div class='+classes[i]+'></div>'
+                }
+                str = str + '<br>'
+            }
+            document.body.innerHTML = str
+            // div = str
+            console.log(div)
+        }
+    </script>
+</body>
+</html>
