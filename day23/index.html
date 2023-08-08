@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="email" name="" id="fname"> -->
+    <!-- <input type="radio" name="gender" id="gender" value="male"> Male
+    <input type="radio" name="gender" id="gender" value="female"> Female <br><br> -->
+    <!-- <input type="checkbox" name="hob" id="hob" value="reading">Reading
+    <input type="checkbox" name="hob" id="hob" value="dancing">dancing
+    <input type="checkbox" name="hob" id="hob" value="tv">tv -->
+    <select name="country" id="country">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="China">China</option>
+    </select>
+
+
+    <input type="submit" value="Submit!" onclick="even()">
+    <script>
+        function even() {
+            // let str = ''
+            // for(let i=0; i<10; i++) {
+            //     if(i%2==0) {
+            //         str = str + i + "<br>"
+            //     }
+            // }
+            // document.getElementById('demo').innerHTML = str
+            // let data = document.getElementsByName('gender')
+            // console.log(data)
+            //    document.getElementById('fname').value = ''
+            // let data = document.querySelector('input[type="radio"]:checked')
+            let data = document.querySelector('#country')
+            // for(let i=0; i<data.length; i++) {
+            //     console.log(data[i].value)
+            // }
+            console.log(data.value)
+        }
+    </script>
+</body>
+
+</html>

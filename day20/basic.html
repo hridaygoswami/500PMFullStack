@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input type="text" id="name" placeholder="Enter your age:">
+    <button onclick="getName();">Submit</button> -->
+    <button onclick="show()">Agree</button>
+    <button onclick="hide()">Disagree</button>
+    <!-- <p id="demo"></p> -->
+    <div id="container">
+        <h1>Hello world</h1>
+        <h2>How are you?</h2>
+    </div>
+<script>
+        // function getName() {
+        //     let age = document.getElementById('name').value
+        //     if(age>18) {
+        //         // document.getElementById('demo').innerHTML = '<h1>'+age+'you will be eligible for lisence</h1>'
+        //         // document.body.style.backgroundColor = 'green'
+        //         document.getElementById('container').style.visibility = 'visible'
+        //     } else {
+        //         // document.getElementById('demo').innerHTML = '<h1>' + age + 'you will not be eligible for lisence</h1>'
+        //         // document.body.style.backgroundColor = 'red'
+        //         document.getElementById('container').style.visibility = 'hidden'
+        //     }
+        //     console.log(fullName)
+        // }
+        function show() {
+            document.getElementById('container').style.visibility = 'visible'
+        }
+        function hide() {
+            document.getElementById('container').style.visibility = 'hidden'
+        }
+    </script>
+</body>
+</html>

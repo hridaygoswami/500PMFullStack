@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: transparent;
+            border: 1px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="fname" id="fullName" placeholder="Enter your full name"> <br> <br>
+    <input type="number" name="age" id="age" placeholder="Enter your age"> <br> <br>
+    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number"> <br> <br>
+    <input type="email" name="email" id="email" placeholder="Enter your email"> <br> <br>
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+    <button onclick="show()"><img src="./pass.png" height="12" width="20"></button> <br> <br>
+    <label style="padding-bottom: 500px;">Enter your DOB:</label><input type="date" name="dob" id="dob"> <br> <br>
+    <textarea rows="10" cols="30" id="address" placeholder="Address"></textarea> <br> <br>
+    <label>Gender</label>
+    <input type="radio" name="gender" id="gender" value="male">Male
+    <input type="radio" name="gender" id="gender" value="female">Female <br> <br>
+    <label>Hobbies</label>
+    <input type="checkbox" name="hob" id="hob" value="reading">Reading
+    <input type="checkbox" name="hob" id="hob" value="singing">Singing
+    <input type="checkbox" name="hob" id="hob" value="tv">TV <br> <br>
+    <label>Select your country</label>
+    <select name="country" id="country">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="China">China</option>
+        <option value="London">London</option>
+        <option value="Canada">Canada</option>
+    </select> <br> <br>
+    <input type="submit" onclick="storeData()">
+
+    <p id="demo"></p>
+    <script>
+        function show() {
+            console.log("Working")
+            // console.log(document.getElementById('password').type)
+            if (document.getElementById('password').type == 'password') {
+                document.getElementById('password').type = 'text'
+                console.log("Changed")
+            } else {
+                document.getElementById('password').type = 'password'
+            }
+        }
+        function storeData() {
+            let obj = {
+                "fname": document.getElementById('fullName').value,
+                "age": document.getElementById('age').value,
+                "tel": document.getElementById('phone').value,
+                "email": document.getElementById('email').value,
+                "password": document.getElementById("password").value,
+                "dob": document.getElementById('dob').value,
+                "gender": document.querySelector('input[type="radio"]:checked').value,
+                "hob": document.querySelectorAll('input[type="checkbox"]:checked'),
+                "country": document.querySelector('#country').value,
+                "address": document.getElementById('address').value,
+                "out":function () {
+                    hob = ''
+                    for(let i=0; i<this.hob.length; i++) {
+                        hob = hob + ', '+this.hob[i].value
+                    }
+
+
+                    str = "\nFname: "+this.fname+"\nAge: "+this.age+"\nPhone: "+this.tel+"\nEmail: "+this.email+"\nPassword: "+this.password+"\nDOB: "+this.dob+"\nGender: "+this.gender+"\nHobbies: "+hob+"\nCountry: "+this.country+"\nAddress: "+this.address
+
+
+                    return str
+                }
+            }
+            console.log(obj.out())
+            document.getElementById("demo").innerText = obj.out()
+        }
+    </script>
+</body>
+
+</html>

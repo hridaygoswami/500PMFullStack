@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        }
+
+        div#container {
+            width: 300px;
+            height: 980px;
+            border: 1px solid black;
+            background-color: black;
+            border-radius: 50px;
+            box-shadow: 0px 0px 50px black;
+        }
+
+        div#red,
+        div#green,
+        div#yellow {
+            height: 300px;
+            width: 300px;
+            border-radius: 100%;
+            /* border: 1px solid black; */
+        }
+
+        div#red {
+            background-color: red;
+            box-shadow: 0px 0px 50px red;
+            opacity: 1;
+        }
+
+        div#yellow {
+            background-color: yellow;
+            box-shadow: 0px 0px 50px yellow;
+            opacity: 0;
+        }
+
+        div#green {
+            background-color: green;
+            box-shadow: 0px 0px 50px green;
+            opacity: 0;
+        }
+
+        h1 {
+            width: 300px;
+            height: 40px;
+            background-color: transparent;
+            color: red;
+            /* border: 1px solid white; */
+            overflow: auto;
+            margin-top: 0px;
+            text-align: center;
+            font-family: 'Fira Code';
+        }
+    </style>
+</head>
+
+<body onload="change()">
+    <div id="container">
+        <h1 id="demo"></h1>
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+    </div>
+    <!-- <button onclick="change()">change</button> -->
+    <script>
+        function change() {
+            // document.getElementById('red').style.backgroundColor = 'white'
+            // document.getElementById('green').style.backgroundColor = 'green'
+            // console.log("Working")
+            // let counter = 0
+            // let x = setInterval(() => {
+            //     console.log(counter)
+            //     counter++
+            //     if (counter == 10) {
+            //         document.getElementById('red').style.backgroundColor = 'white'
+            //         document.getElementById('green').style.backgroundColor = 'green'
+            //         clearInterval(x)
+            //     }
+            // }, 1000);
+            // let opacity_red = 1
+            // let opacity_green = 0
+            // let counter = 0
+            // let x = setInterval(() => {
+            //     opacity_red = opacity_red - 0.1
+            //     opacity_green = opacity_green + 0.1
+            //     counter = counter + 1
+            //     document.getElementById('red').style.opacity = opacity_red
+            //     document.getElementById('green').style.opacity = opacity_green
+            //     if (counter == 10) {
+            //         console.log(opacity_green, opacity_red, counter)
+            //         clearInterval(x)
+            //     }
+            // }, 1000)
+            // let opacity_red = 1
+            // let opacity_green = 0
+            // let counter = 0
+            // let x = setInterval(() => {
+            //     // opacity_red = opacity_red - 0.1
+            //     // opacity_green = opacity_green + 0.1
+            //     counter = counter + 1
+            //     console.log(counter)
+            //     document.getElementById('demo').innerText = counter
+            //     if(counter >= 1) {
+            //         document.getElementById('red').style.opacity = 1
+            //         document.getElementById('green').style.opacity = 0
+            //         document.getElementById('demo').style.color = 'red'
+            //     }
+            //     if (counter == 10) {
+            //         let red = setInterval(() => {
+            //             opacity_red = opacity_red - 0.1
+            //             document.getElementById('red').style.opacity = opacity_red
+            //             console.log(opacity_red)
+            //             if (opacity_red <= 0) {
+            //                 clearInterval(red)
+            //             }
+            //         }, 60)
+            //         let green = setInterval(() => {
+            //             opacity_green = opacity_green + 0.1
+            //             document.getElementById('green').style.opacity = opacity_green
+            //             console.log(opacity_green)
+            //             if (opacity_green >= 1) {
+            //                 clearInterval(green)
+            //             }
+            //         }, 60)
+            //         document.getElementById('demo').style.color = 'green'
+            //         clearInterval(x)
+            //         // counter = 0
+            //     }
+            // }, 1000)
+
+            let opacity_red = 1
+            let opacity_yellow = 0
+            let opacity_green = 0
+            let counter = 0
+            let x = setInterval(() => {
+                // opacity_red = opacity_red - 0.1
+                // opacity_green = opacity_green + 0.1
+                counter = counter + 1
+                console.log(counter)
+                // document.getElementById('demo').innerText = counter
+                // if (counter >= 1) {
+                //     document.getElementById('red').style.opacity = 1
+                //     document.getElementById('green').style.opacity = 0
+                //     document.getElementById('demo').style.color = 'red'
+                // }
+                if (counter == 10) {
+                    let red = setInterval(() => {
+                        opacity_red = opacity_red - 0.1
+                        document.getElementById('red').style.opacity = opacity_red
+                        console.log(opacity_red)
+                        if (opacity_red <= 0) {
+                            clearInterval(red)
+
+                            // yellow change
+                            console.log("Yellow starting")
+                            let yellow = setInterval(() => {
+                                opacity_yellow = opacity_yellow + 0.1
+                                document.getElementById('yellow').style.opacity = opacity_yellow
+                                console.log(opacity_yellow)
+                                if (opacity_yellow >= 1) {
+                                    clearInterval(yellow)
+                                    // green change
+                                    setTimeout(() => {
+                                        console.log("Green starting")
+                                        let green = setInterval(() => {
+                                            console.log(opacity_yellow, 'yellow')
+                                            opacity_yellow = opacity_yellow - 0.1
+                                            document.getElementById('yellow').style.opacity = opacity_yellow
+                                            opacity_green = opacity_green + 0.1
+                                            document.getElementById('green').style.opacity = opacity_green
+                                            console.log(opacity_green)
+                                            if (opacity_green >= 1) {
+                                                clearInterval(green)
+                                            }
+                                        }, 60)
+                                    }, 2000)
+                                }
+                            }, 60)
+                        }
+                    }, 60)
+
+                    // document.getElementById('demo').style.color = 'green'
+                    clearInterval(x)
+                    // counter = 0
+                }
+            }, 1000)
+
+        }
+    </script>
+</body>
+
+</html>

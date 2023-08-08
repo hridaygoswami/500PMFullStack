@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <style>
+        #div {
+            height: 300px;
+            width: 300px;
+            background-color: black;
+            position: absolute;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button>Start animation</button>
+    <div id="div">Hello</div>
+    <script>
+        $(document).ready(function() {
+            $('button').click(function() {
+                // $('#div').animate({left: '500px'})
+                // $('#div').animate({
+                //     left: '500px',
+                //     // opacity: '0.5',
+                //     height: '500px',
+                //     backgroundColor: 'red'
+                // }, 2000)
+                let div = $('#div')
+                // div.animate({
+                //     height: "600px",
+                //     opacity: '0.4'
+                // },"slow")
+                // div.animate({
+                //     width: '600px',
+                //     opacity: '0.8'
+                // },"slow")
+                // div.animate({
+                //     height: '300px',
+                //     opacity: '0.4'
+                // },"slow")
+                // div.animate({
+                //     left: '500px',
+                //     opacity: '1'
+                //  },"slow")
+                //  div.animate({
+                //     right: '1000px',
+                //     opacity: '0.8'
+                //  },"slow")
+                // div.animate({
+                //     width: '300px',
+                //     opacity: '1'
+                // },"slow")
+                div.animate({width: '600px'}, 'slow')
+                div.animate({fontSize: '3rem'}, 'slow')
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1 {
+            margin-left: -683px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./img1.jpg" id="img2" alt="">
+    <img src="./img2.jpg" id="img1" alt="">
+    <script>
+        // function display() {
+        //     console.log("Display executed")
+        //     let opacity = 1
+        //     let x = setInterval(()=>{
+        //         opacity = opacity - 0.1
+        //         document.getElementById('img1').style.opacity = opacity
+        //         if(opacity<=0) {
+        //             clearInterval(x)
+        //         }
+        //     }, 50)
+        // }
+        // function hide() {
+        //     console.log("Hide executed")
+        //     let opacity = 0
+        //     let x = setInterval(() => {
+        //         opacity = opacity + 0.1
+        //         document.getElementById('img1').style.opacity = opacity
+        //         if (opacity >= 1) {
+        //             clearInterval(x)
+        //         }
+        //     }, 50)
+        // }    
+        document.getElementById('img1').addEventListener('mouseover', ()=>{
+            console.log("Hello")
+            let opacity = 1
+            let x = setInterval(()=>{
+                opacity = opacity - 0.1
+                document.getElementById('img1').style.opacity = opacity
+                if(opacity<=0) {
+                    clearInterval(x)
+                }
+            }, 50)
+        })
+        document.getElementById("img1").addEventListener('mouseout', ()=>{
+            console.log("Out")
+            let opacity = 0
+            let x = setInterval(() => {
+                opacity = opacity + 0.1
+                document.getElementById('img1').style.opacity = opacity
+                if (opacity >= 1) {
+                    clearInterval(x)
+                }
+            }, 50)
+        })
+    </script>
+</body>
+</html>

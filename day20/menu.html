@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+        } */
+        div {
+            float: left;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            padding-right: 20px;
+            margin: 5px;
+            margin-top: 50px;
+            margin-left: -110px;
+        }
+
+        div#container {
+            border: 1px solid transparent;
+        }
+
+        div#panner,
+        div#sweets,
+        div#breads {
+            visibility: visible;
+        }
+        div#sweets {
+            margin-left: -145px;
+        }
+        div#breads {
+            margin-left: -153px;
+        }
+        div#panner:hover,
+        div#sweets:hover,
+        div#breads:hover {
+            box-shadow: 0px 0px 10px black;
+            background-color: black;
+            color: white;
+        }
+
+        div#nav {
+            margin-top: 0px;
+            margin-left: 141px;
+            border: 1px solid transparent;
+        }
+
+        .items {
+            float: left;
+            list-style-type: none;
+            margin: 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <ul id="navItem">
+            <li class="items panner"><button onclick="panner()">Panner</button></li>
+            <li class="items sweets"><button onclick="sweets()">Sweets</button></li>
+            <li class="items breads"><button onclick="breads()">Breads</button></li>
+        </ul>
+    </div>
+    <div id="container">
+        <div id="panner">
+            <ul>
+                <li>Panner Tikka</li>
+                <li>Muttor Panner</li>
+                <li>Sahi Panner</li>
+                <li>Tawa Panner</li>
+            </ul>
+        </div>
+        <div id="sweets">
+            <ul>
+                <li>Rasugulla</li>
+                <li>Gula Jamun</li>
+                <li>Kaju Katri</li>
+                <li>Monthal</li>
+            </ul>
+        </div>
+        <div id="breads">
+            <ul>
+                <li>Butter Roti</li>
+                <li>Gralic Naan</li>
+                <li>Tandori Roti</li>
+                <li>Butter Naan</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function panner() {
+            document.getElementById('panner').style.visibility = 'visible'
+            document.getElementById('sweets').style.visibility = 'hidden'
+            document.getElementById('breads').style.visibility = 'hidden'
+        }
+        function sweets() {
+            document.getElementById('panner').style.visibility = 'hidden'
+            document.getElementById('sweets').style.visibility = 'visible'
+            document.getElementById('breads').style.visibility = 'hidden'
+        }
+        function breads() {
+            document.getElementById('panner').style.visibility = 'hidden'
+            document.getElementById('sweets').style.visibility = 'hidden'
+            document.getElementById('breads').style.visibility = 'visible'
+        }
+    </script>
+</body>
+
+</html>

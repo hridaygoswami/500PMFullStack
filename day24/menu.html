@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <dl>
+        <dt>Panner</dt>
+        <dd>
+            <ul>
+                <li><input type="checkbox" name="item" id="item" class="item" value="sahi_panner-450"><label>Sahi Panner
+                        450</label></li>
+                <li><input type="checkbox" name="item" id="item" class="item" value="tikka_panner-350"><label>Tikka
+                        Panner 350</label></li>
+                <li><input type="checkbox" name="item" id="item" class="item" value="tawa_panner-450"><label>Tawa Panner
+                        450</label></li>
+                <li><input type="checkbox" name="item" id="item" class="item" value="butter_panner-500"><label>Butter
+                        Panner 500</label></li>
+            </ul>
+        </dd>
+
+        <dt>Roti</dt>
+        <dd>
+            <ul>
+                <li><input type="checkbox" name="roti" id="roti" value="naan-15"><label>Naan 15</label></li>
+                <li><input type="checkbox" name="roti" id="roti" value="butter_naan-20"><label>Butter Naan 20</label>
+                </li>
+                <li><input type="checkbox" name="roti" id="roti" value="garlic_naan-30"><label>Garlic Naan 30</label>
+                </li>
+                <li><input type="checkbox" name="roti" id="roti" value="hariyali_naan-50"><label>Hariyali Naan
+                        50</label></li>
+            </ul>
+        </dd>
+    </dl>
+    <input type="button" value="Submit" onclick="store()">
+    <h1 id="demo"></h1>
+    <script>
+        function store() {
+            let items = document.querySelectorAll('input[type="checkbox"]:checked')
+            let str_item = 'Item: '
+            let str_price = "Price: "
+            let total = 0
+
+            for (let i = 0; i < items.length; i++) {
+                // console.log(panner[i].value.split('-'))
+
+                str_item = str_item + ", " + items[i].value
+                // str_price = str_price+", "+panner[i].value.split('-')[1]
+                total = total + Number(items[i].value.split('-')[1])
+            }
+            console.log(str_item)
+            // console.log(str_price)
+            document.getElementById("demo").innerHTML = str_item
+            console.log(total)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#container,
+        div#container2 {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="choice">
+        <button id="18">You are 18</button>
+        <button id="n18">You are not 18</button>
+    </div>
+
+    <div id="container">
+        <h1>Welcome to my website</h1>
+        <h2>This is an amazing website</h2>
+        <h3>How is your day?</h3>
+    </div>
+    <div id="container2">
+
+    </div>
+    <script>
+        // let x = Number(prompt("Enter your age"))
+        // if (x >= 18) {
+        //     document.getElementById('container').style.visibility = 'visible'
+        //     // document.getElementById('choice').style.visibility = 'hidden'
+
+        // } else {
+        //     document.getElementById('container2').style.visibility = 'visible'
+        //     // document.getElementById('choice').style.visibility = 'hidden'
+        //     document.getElementById('container2').innerHTML = '<h1>You are not allowed in this place</h1>'
+
+        // }
+        document.getElementById("18").addEventListener('click', () => {
+            document.getElementById('container').style.visibility = 'visible'
+            document.getElementById('choice').style.visibility = 'hidden'
+        })
+        document.getElementById("n18").addEventListener('click', () => {
+            document.getElementById('container2').style.visibility = 'visible'
+            document.getElementById('choice').style.visibility = 'hidden'
+            document.getElementById('container2').innerHTML = '<h1>You are not allowed in this place</h1>'
+        })
+    </script>
+</body>
+
+</html>
