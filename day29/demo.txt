@@ -1,0 +1,2 @@
+This is a demo file created to read file using JS
+This is yet another line
