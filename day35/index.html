@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="signup">
+        <input type="email" name="email" id="email-signup">
+        <input type="password" name="password" id="password-signup">
+        <input type="button" value="Submit!" onclick="getData()">
+    </div>
+    <div id="signin">
+        <input type="email" name="email" id="email-signin">
+        <input type="password" name="password" id="password-signin">
+        <input type="button" value="Submit!" onclick="getData()">
+    </div>
+    <script>
+        function getData() {
+            window.location = 'http://127.0.0.1:5500/hello.html'
+            let email_signup = document.getElementById("email-signup").value
+            let password_signup = document.getElementById("password-signup").value
+            if (email_signup != '' && password_signup != '') {
+                console.log(email_signup, password_signup)
+                let email_signin = document.getElementById("email-signin").value
+                let password_signin = document.getElementById("password-signin").value
+                if (email_signin == email_signup && password_signin==password_signup) {
+                    alert("Approved")
+                } else {
+                    alert("Declined")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+-- to see all databases in a particular env
+show dbs;
+
+-- to use a particular database from a given env
+use <database-name>;
+
+-- to see the current database 
+db;
+
+-- to delete a database
+db.dropDatabase();
+
+-- to see all the collections inside a particular database
+show collections;
+
+-- to create a new collection
+db.createCollection(<collection-name>);
+
+-- to delete a particular collection
+db.<collection-name>.drop()
+
+-- to see data from a particular collection
+-> to see all 
+    db.<collection-name>.find()
+-> to see only one
+    db.<collection-name>.findOne()
+
+-- to find any type of data inside our collection
+-> to find one
+    db.<collection-name>.findOne({"Key":"Value", "KeyN":"ValueN"})
+-> to find multiple
+    db.<collection-name>.find({"Key":"Value", "KeyN":"ValueN"})
+
+
+-- to insert data into a collection
+-> to insert single data
+    db.<collection-name>.insertOne({data})
+-> to insert multiple data
+    db.<collection-name>.insertMany([{data1}, {data2}, ... , {dataN}])
+
+-- to limit the number of output from a query
+db.<collection-name>.find({query}).limit(N)
+
+-- to count the number of output by running a query
+db.<collection-name>.find({query}).count()
+
+-- to update values in a collection
+-> to update one
+    db.<collection-name>.updateOne({query}, {$atomic-operator: {query}})
+
+-> to update many
+    db.<collection-name>.updateMany({query}, {$atomic-operator: {query}})
+
+Atomic operators:
+    $inc: to increase a numerical value by something
+    $rename: to change the key of a field inside a collection
+    $set: to change any field insied a collection
+    $lt: less than
+    $lte: less than equal too
+    $gt: greater than
+    $gte: greater than equal too
+
+
+-- to delete data from a collection
+-> to delete a single value:
+    db.<collection-name>.deleteOne({query})
+-> to delete multiple value:
+    db.<collection-name>.deleteMany({query})
